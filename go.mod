@@ -1,6 +1,6 @@
 module github.com/kaudit/api
 
-go 1.23.8
+go 1.23.0
 
 require (
 	github.com/kaudit/auth v0.1.0
