@@ -60,7 +60,7 @@ import (
 authenticator := myauth.NewKubeConfigAuth("/path/to/kubeconfig")
 
 // Initialize the K8s API with your authenticator
-k8sApi, err := k8s_api.NewK8sApi(authenticator)
+k8sAPI, err := k8s_api.NewK8sApi(authenticator)
 if err != nil {
     // handle error
 }
@@ -70,7 +70,7 @@ if err != nil {
 
 ```go
 // Get the Pod API
-podAPI := k8sApi.GetPodAPI()
+podAPI := k8sAPI.GetPodAPI()
 
 // Retrieve a specific pod
 pod, err := podAPI.GetPodByName(ctx, "default", "my-pod-name")
@@ -89,7 +89,7 @@ if err != nil {
 
 ```go
 // Get the Deployment API
-deploymentAPI := k8sApi.GetDeploymentAPI()
+deploymentAPI := k8sAPI.GetDeploymentAPI()
 
 // Get a specific deployment
 deployment, err := deploymentAPI.GetDeploymentByName(ctx, "default", "my-deployment")
@@ -102,7 +102,7 @@ if err != nil {
 
 ```go
 // Get the Service API
-serviceAPI := k8sApi.GetServiceAPI()
+serviceAPI := k8sAPI.GetServiceAPI()
 
 // List services by field selector
 services, err := serviceAPI.ListServicesByField(ctx, "default", "metadata.name=frontend")
@@ -115,7 +115,7 @@ if err != nil {
 
 ```go
 // Get the Namespace API
-namespaceAPI := k8sApi.GetNamespaceAPI()
+namespaceAPI := k8sAPI.GetNamespaceAPI()
 
 // Get a specific namespace
 namespace, err := namespaceAPI.GetNamespaceByName(ctx, "default")

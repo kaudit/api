@@ -1,4 +1,4 @@
-package pod_api
+package podapi
 
 import (
 	"context"

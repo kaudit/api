@@ -1,4 +1,4 @@
-package deployment_api
+package deploymentapi
 
 import (
 	"context"

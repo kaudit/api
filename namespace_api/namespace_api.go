@@ -1,4 +1,4 @@
-package namespace_api
+package namespaceapi
 
 import (
 	"context"
