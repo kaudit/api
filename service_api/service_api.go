@@ -1,4 +1,4 @@
-package service_api
+package serviceapi
 
 import (
 	"context"
